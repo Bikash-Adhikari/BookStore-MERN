@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Story Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 0,
+        "price": 0,
         "category": "Free",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -11,15 +11,15 @@
         "id": 2,
         "name": "Comedy Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 200,
-        "category": "Entertainment",
+        "price": 200,
+        "category": "Enjoy",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
     {
         "id": 3,
         "name": "Soprts Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 460,
+        "price": 460,
         "category": "Sports",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "Music Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 0,
+        "price": 0,
         "category": "Free",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Drama Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 0,
+        "price": 0,
         "category": "Free",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "Sci-fic Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 890,
+        "price": 890,
         "category": "Sci-fic",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Ghost Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 260,
+        "price": 260,
         "category": "Drama",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Love Story Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 0,
+        "price": 0,
         "category": "Free",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -67,15 +67,15 @@
         "id": 9,
         "name": "Development Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 670,
-        "category": "Self Improvement",
+        "price": 670,
+        "category": "Inspire",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
     {
         "id": 10,
         "name": "Programming Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 700,
+        "price": 700,
         "category": "Computer",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "Japanese Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 0,
+        "price": 0,
         "category": "Free",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     },
@@ -91,7 +91,7 @@
         "id": 1,
         "name": "Food Book",
         "title": "Hand-picked for its power to move.",
-        "Price": 390,
+        "price": 390,
         "category": "Food",
         "image": "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1350"
     }
