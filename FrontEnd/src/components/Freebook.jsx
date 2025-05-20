@@ -47,10 +47,10 @@ function Freebook() {
     return (
         <>
 
-            <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 my-10'>
+            <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 my-10 bg-white text-black dark:bg-blue-950 dark:text-white'>
                 <div>
                     <h1 className='font-semibold text-xl pb-2'>Free Offered Courses !!!</h1>
-                    <p>Each day you'll receive a selection of discounted titles, from bestsellers to hidden gems. Tell BookBub what you like to read, and get handpicked deals that match your reading taste.</p>
+                    <p className='font-medium'>Each day you'll receive a selection of discounted titles, from bestsellers to hidden gems. Tell BookBub what you like to read, and get handpicked deals that match your reading taste.</p>
                 </div>
 
                 <div className="px-3">

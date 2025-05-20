@@ -1,19 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from './home/Home'
-import Course from './components/Course'
 import { Route, Routes } from 'react-router-dom'
 import Courses from './courses/Courses'
+import { ThemeProvider } from './contexts/Theme'
+
 
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/courses' element={<Courses />} />
-      </Routes>
+  const [themeMode, setThemeMode] = useState("light");
 
-    </>
+  //pass functionality for lightTheme & darkTheme
+  const lightTheme = () => {
+    setThemeMode("light")
+  }
+
+  const darkTheme = () => {
+    setThemeMode("dark")
+  }
+
+
+
+  //Actual Change Theme in HTML ==> useEffec HOOK
+  useEffect(() => {
+    document.querySelector("html").classList.remove("light", "dark")
+    document.querySelector("html").classList.add(themeMode)
+  }, [themeMode])
+
+
+
+  return (
+    <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
+      <>
+        <div className='bg-white text-black dark:bg-blue-950 dark:text-white'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/courses' element={<Courses />} />
+          </Routes>
+        </div>
+      </>
+    </ThemeProvider>
   )
 }
 

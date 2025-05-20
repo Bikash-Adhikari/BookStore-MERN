@@ -7,7 +7,7 @@ function Courses() {
     return (
         <>
             <Navbar />
-            <div className='min-h-screen'>
+            <div className='min-h-screen flex justify-center'>
                 <Course />
             </div>
             <Footer />

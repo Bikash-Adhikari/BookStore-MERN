@@ -7,10 +7,12 @@ import Freebook from '../components/Freebook'
 function Home() {
     return (
         <>
-            <Navbar />
-            <Banner />
-            <Freebook />
-            <Footer />
+            <div className='bg-white text-black dark:bg-blue-950 dark:text-white'>
+                <Navbar />
+                <Banner />
+                <Freebook />
+                <Footer />
+            </div>
         </>
     )
 }
