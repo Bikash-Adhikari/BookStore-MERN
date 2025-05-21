@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Courses from '../courses/Courses';
 import { Link } from 'react-router-dom';
 import useTheme from '../contexts/Theme';
+import Login from './Login';
 
 
 
@@ -193,7 +194,13 @@ function Navbar() {
 
 
                         <div className="active:scale-110 duration-300">
-                            <a className="bg-white text-black dark:bg-blue-950 dark:text-white border border-blue-900  px-3 py-2 rounded-md hover:bg-blue-800 hover:text-white duration-300 cursor-pointer">Login</a>
+                            <a className="bg-white text-black dark:bg-blue-950 dark:text-white border border-blue-900  px-3 py-2 rounded-md hover:bg-blue-800 hover:text-white duration-300 cursor-pointer"
+
+                                onClick={() => document.getElementById("my_modal_3").showModal()}
+                            >
+                                Login
+                            </a>
+                            <Login />
                         </div>
 
                     </div>
