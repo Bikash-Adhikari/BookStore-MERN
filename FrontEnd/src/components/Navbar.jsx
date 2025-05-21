@@ -79,21 +79,21 @@ function Navbar() {
     const navList = (
         <>
             <li>
-                <a href='/'>Home</a>
+                <Link to={'/'}><a>Home</a></Link>
             </li>
             <li>
                 <details>
 
                     {/* navigate Courses-page without Brouser DOM reload ==> using "Link" */}
                     <summary><Link to={'/courses'}> <span>Courses</span> </Link></summary>
-                    <ul className="p-2 bg-white text-black dark:bg-blue-950 dark:text-white">
+                    <ul className="p-2 bg-white text-black dark:bg-blue-800 dark:text-white">
                         <li><a>Science</a></li>
                         <li><a>Commerce</a></li>
                     </ul>
                 </details>
             </li>
             <li>
-                <a>Contact</a>
+                <Link to={'/contact'}><a>Contact</a></Link>
             </li>
             <li>
                 <a>About</a>
@@ -108,7 +108,7 @@ function Navbar() {
                 className={`max-w-dvw container mx-auto z-99 fixed top-0 left-0 right-0 flex justify-center bg-white text-black dark:bg-blue-950 dark:text-white dark:shadow-gray-900
                 ${sticky ? "sticky-navbar shadow-md bg-base-300 duration-300 transition-all ease-in-out" : ""
                     }`}>
-                <div className="navbar shadow-sm max-w-screen-2xl md:px-16   px-4">
+                <div className="navbar shadow-sm max-w-screen-2xl md:px-20   px-4">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -120,7 +120,7 @@ function Navbar() {
                                 {navList}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-2xl font-bold">BookStore</a>  {/* logo */}
+                        <Link to='/'><a className="text-2xl font-bold">BookStore</a></Link>  {/* logo */}
                     </div>
 
 

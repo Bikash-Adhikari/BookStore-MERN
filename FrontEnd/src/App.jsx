@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom'
 import Courses from './courses/Courses'
 import { ThemeProvider } from './contexts/Theme'
 import Signup from './components/Signup'
+import ContactMain from './contact/ContactMain'
+
 
 
 
@@ -37,6 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path='/courses' element={<Courses />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/contact' element={<ContactMain />} />
           </Routes>
         </div>
       </>
