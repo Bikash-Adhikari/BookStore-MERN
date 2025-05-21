@@ -9,7 +9,7 @@ function Banner() {
 
                     <div className='space-y-8'>
                         <h1 className='text-4xl font-bold'>
-                            Hello, welcome here to learn something <span className='text-pink-500'>new everyday!!!</span>
+                            Hello, welcome here to learn something <span className='text-blue-500'>new everyday!!!</span>
                         </h1>
 
                         <p className='font-medium'>
@@ -34,7 +34,7 @@ function Banner() {
 
                     </div>
 
-                    <button className="btn btn-secondary mt-5">Suscribe</button>
+                    <button className="btn font-medium mt-5 border-none outline-none bg-blue-700 hover:bg-blue-800">Suscribe</button>
 
 
                 </div>
