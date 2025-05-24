@@ -5,6 +5,7 @@ import Courses from './courses/Courses'
 import { ThemeProvider } from './contexts/Theme'
 import Signup from './components/Signup'
 import ContactMain from './contact/ContactMain'
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/contact' element={<ContactMain />} />
           </Routes>
+          <Toaster />
         </div>
       </>
     </ThemeProvider>

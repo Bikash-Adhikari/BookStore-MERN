@@ -2,10 +2,33 @@ import React from 'react'
 import Login from './Login'
 import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from 'react-hot-toast';
 
 function Signup() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const onSubmit = async (data) => {
+        const userInfo = {
+            fullname: data.fullname,
+            email: data.email,
+            password: data.password
+        }
+        await axios.post("http://localhost:4001/user/signup", userInfo)
+            .then((res) => {
+                console.log(res.data)
+                if (res.data) {
+                    toast.success('Signup Successfully!');
+                }
+                localStorage.setItem("users", JSON.stringify(res.data.user));
+            })
+            .catch((err) => {
+                if (err.response) {
+                    toast.error('Error: ' + err.response.data.message)
+                }
+            })
+
+    };
 
     return (
         <>
@@ -32,9 +55,9 @@ function Signup() {
                                     type="text" id="name" name="name"
                                     placeholder='Enter your full name'
                                     className="w-full px-4 py-1.5 font-medium text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-                                    {...register("name", { required: true })}
+                                    {...register("fullname", { required: true })}
                                 />
-                                {errors.name && <span className='text-xs text-red-600 font-medium' >Fullname is required</span>}
+                                {errors.fullname && <span className='text-xs text-red-600 font-medium' >Fullname is required</span>}
                             </div>
 
                             <div className="mb-3.5">
