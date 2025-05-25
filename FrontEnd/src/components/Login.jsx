@@ -21,12 +21,21 @@ function Login() {
                 console.log(res.data)
                 if (res.data) {
                     toast.success('Login Successfully!');
+                    document.getElementById('my_modal_3')?.close();
+                    localStorage.setItem("users", JSON.stringify(res.data.user));
+                    // window.location.reload()
+                    // navigate('/courses');
+                    setTimeout(() => {
+                        window.location.href = '/courses';
+                    }, 1000);
                 }
-                localStorage.setItem("users", JSON.stringify(res.data.user));
+
+
             })
             .catch((err) => {
                 if (err.response) {
                     toast.error('Error: ' + err.response.data.message)
+                    setTimeout(() => { }, 2000);
                 }
             })
     };

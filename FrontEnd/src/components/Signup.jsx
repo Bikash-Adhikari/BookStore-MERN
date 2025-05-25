@@ -1,11 +1,15 @@
 import React from 'react'
 import Login from './Login'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from 'react-hot-toast';
 
 function Signup() {
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
+    const Navigate = useNavigate()
+
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
@@ -19,6 +23,8 @@ function Signup() {
                 console.log(res.data)
                 if (res.data) {
                     toast.success('Signup Successfully!');
+                    Navigate(from, { replace: true })
+                    // Navigate(document.getElementById("my_modal_3").showModal()) //this is popup of login 
                 }
                 localStorage.setItem("users", JSON.stringify(res.data.user));
             })
