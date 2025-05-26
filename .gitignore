@@ -1,0 +1,8 @@
+# Environment variables
+BackEnd/.env
+FrontEnd/.env
+
+
+# Build output
+FrontEnd/dist
+BackEnd/dist

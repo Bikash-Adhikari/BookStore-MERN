@@ -10,7 +10,7 @@ function Course() {
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get("http://localhost:4001/book") //getting data fron Backend & Database
+                const res = await axios.get(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/book`) //getting data fron Backend & Database
                 console.log(res.data)
                 setBook(res.data)
 
