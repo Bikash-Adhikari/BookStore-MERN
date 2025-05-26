@@ -1,10 +1,11 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
-import bookRoute from './routes/book.route.js';
+import bookRoute from '../routes/book.route.js';
 import cors from 'cors';
 
-import userRoute from './routes/user.route.js'
+import userRoute from '../routes/user.route.js'
+import ServerlessHttp from 'serverless-http';
 
 
 dotenv.config()
@@ -16,7 +17,7 @@ app.use(cors({
 app.use(express.json())
 
 
-const PORT = process.env.PORT || 4000
+
 const URI = process.env.MongoDB_URI
 
 
@@ -41,9 +42,6 @@ app.get('/', (req, res) => {
 });
 
 
-
-
-app.listen(PORT, () => {
-    console.log(`BookStore server is listening on port ${PORT}`)
-})
+module.exports = app
+module.exports.handler = ServerlessHttp(app)
 
