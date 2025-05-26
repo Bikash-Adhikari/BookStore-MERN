@@ -11,9 +11,7 @@ import ServerlessHttp from 'serverless-http';
 dotenv.config()
 
 const app = express()
-app.use(cors({
-    origin: "book-store-mern-frontend-beta.vercel.app"
-}))
+app.use(cors())
 app.use(express.json())
 
 

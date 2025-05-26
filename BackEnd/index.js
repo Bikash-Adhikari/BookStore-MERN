@@ -11,7 +11,7 @@ dotenv.config()
 
 const app = express()
 app.use(cors({
-    origin: "book-store-mern-frontend-beta.vercel.app"
+    origin: process.env.FRONTEND_URL
 }))
 app.use(express.json())
 
