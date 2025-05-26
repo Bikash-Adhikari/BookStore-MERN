@@ -10,13 +10,14 @@ import toast from 'react-hot-toast';
 function Login() {
     const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
 
     const onSubmit = async (data) => {
         const userInfo = {
             email: data.email,
             password: data.password
         }
-        await axios.post(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/user/login`, userInfo)
+        await axios.post(`${baseURL}/user/login`, userInfo)
             .then((res) => {
                 // console.log(res.data)
                 if (res.data) {

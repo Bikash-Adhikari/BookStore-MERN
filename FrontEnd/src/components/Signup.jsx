@@ -11,6 +11,8 @@ function Signup() {
     const Navigate = useNavigate()
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
+
 
     const onSubmit = async (data) => {
         const userInfo = {
@@ -18,7 +20,7 @@ function Signup() {
             email: data.email,
             password: data.password
         }
-        await axios.post(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/user/signup`, userInfo)
+        await axios.post(`${baseURL}/user/signup`, userInfo)
             .then((res) => {
                 // console.log(res.data)
                 if (res.data) {

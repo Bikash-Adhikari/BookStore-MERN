@@ -6,11 +6,12 @@ import axios from 'axios';
 
 function Course() {
     const [book, setBook] = useState([])
+    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
 
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/book`) //getting data fron Backend & Database
+                const res = await axios.get(`${baseURL}/book`) //getting data fron Backend & Database
                 // console.log(res.data)
                 setBook(res.data)
 
