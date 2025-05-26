@@ -11,7 +11,7 @@ import { useAuth } from './contexts/AuthProvider'
 
 function App() {
   const [authUser, setAuthUser] = useAuth();
-  console.log(authUser)
+  // console.log(authUser)
 
 
   const [themeMode, setThemeMode] = useState("light");

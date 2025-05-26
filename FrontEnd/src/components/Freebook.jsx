@@ -15,10 +15,11 @@ function Freebook() {
                 const res = await axios.get(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/book`)
                 const freeRes = res.data.filter((data) => data.category === "Free")
                 setFreebook(freeRes)
-                console.log(freeRes)
+                // console.log(freeRes)
 
             } catch (error) {
-                console.log(error)
+                console.error(error)
+
             }
         }
         getFreebook()

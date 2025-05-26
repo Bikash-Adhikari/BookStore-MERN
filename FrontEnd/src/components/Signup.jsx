@@ -20,7 +20,7 @@ function Signup() {
         }
         await axios.post(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/user/signup`, userInfo)
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data) {
                     toast.success('Signup Successfully!');
                     Navigate(from, { replace: true })

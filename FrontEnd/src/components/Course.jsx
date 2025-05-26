@@ -11,11 +11,11 @@ function Course() {
         const getBook = async () => {
             try {
                 const res = await axios.get(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/book`) //getting data fron Backend & Database
-                console.log(res.data)
+                // console.log(res.data)
                 setBook(res.data)
 
             } catch (error) {
-                console.log(error)
+                console.error(error)
             }
         }
 

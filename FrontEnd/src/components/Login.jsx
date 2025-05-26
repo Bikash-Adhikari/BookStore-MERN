@@ -18,7 +18,7 @@ function Login() {
         }
         await axios.post(`${import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL}/user/login`, userInfo)
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 if (res.data) {
                     toast.success('Login Successfully!');
                     document.getElementById('my_modal_3')?.close();

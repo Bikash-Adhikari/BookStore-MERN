@@ -33,6 +33,11 @@ app.use("/book", bookRoute)
 app.use('/user', userRoute)
 
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+
 app.listen(PORT, () => {
     console.log(`BookStore server is listening on port ${PORT}`)
 })
