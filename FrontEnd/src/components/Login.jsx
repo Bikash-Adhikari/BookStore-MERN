@@ -27,12 +27,11 @@ function Login() {
                     toast.success('Login Successfully!');
                     document.getElementById('my_modal_3')?.close();
                     localStorage.setItem("users", JSON.stringify(res.data.user));
-                    // window.location.reload()
-                    // navigate('/courses');
+                    window.location.reload()
+                    navigate('/courses');
+
                     setTimeout(() => {
-                        // window.location.href = '/courses';
-                        window.location.reload()
-                        navigate('/courses');
+                        window.location.href = '/courses';
                     }, 1000);
                 }
 
