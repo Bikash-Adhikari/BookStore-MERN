@@ -11,8 +11,24 @@ import ServerlessHttp from 'serverless-http';
 dotenv.config()
 
 const app = express()
-app.use(cors())
+
+const allowedOrigin = process.env.FRONTEND_URL || 'https://book-store-mern-frontend-beta.vercel.app';
+
+
+console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
+app.use(cors({
+    origin: allowedOrigin,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+
 app.use(express.json())
+
+
+// Handle preflight requests
+app.options('*', cors());
 
 
 
