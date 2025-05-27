@@ -5,6 +5,7 @@ import bookRoute from './routes/book.route.js';
 import cors from 'cors';
 
 import userRoute from './routes/user.route.js'
+import ServerlessHttp from 'serverless-http';
 
 
 dotenv.config()
@@ -66,3 +67,4 @@ app.listen(PORT, () => {
     console.log(`BookStore server is listening on port ${PORT}`)
 })
 
+export const handler = ServerlessHttp(app);

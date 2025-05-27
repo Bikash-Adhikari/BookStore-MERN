@@ -5,7 +5,8 @@ import bookRoute from '../routes/book.route.js';
 import cors from 'cors';
 
 import userRoute from '../routes/user.route.js'
-import ServerlessHttp from 'serverless-http';
+import { handler } from '../index.js'; // Adjust relative path if your backend file is elsewhere
+
 
 
 dotenv.config()
@@ -56,5 +57,5 @@ app.get('/', (req, res) => {
 });
 
 
-export const handler = ServerlessHttp(app);
+export default handler;
 
