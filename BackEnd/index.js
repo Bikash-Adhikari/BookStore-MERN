@@ -33,8 +33,6 @@ app.use(cors({
 app.use(express.json())
 
 
-// Handle preflight requests
-app.options('*', cors());
 
 const PORT = process.env.PORT || 4000
 const URI = process.env.MongoDB_URI
