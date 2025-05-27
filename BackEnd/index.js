@@ -5,16 +5,16 @@ import bookRoute from './routes/book.route.js';
 import cors from 'cors';
 
 import userRoute from './routes/user.route.js'
-import ServerlessHttp from 'serverless-http';
+
 
 
 dotenv.config()
 
 const app = express()
 
-const allowedOrigin = process.env.FRONTEND_URL || 'https://book-store-mern-frontend-beta.vercel.app';
+const allowedOrigin = process.env.FRONTEND_URL
 
-console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
+
 app.use(cors({
     origin: allowedOrigin,
     credentials: true,
@@ -23,11 +23,6 @@ app.use(cors({
 }));
 
 
-
-// app.use(cors({
-//     origin: process.env.FRONTEND_URL,
-//     credentials: true
-// }))
 
 
 app.use(express.json())
@@ -64,5 +59,3 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`BookStore server is listening on port ${PORT}`)
 })
-
-export const handler = ServerlessHttp(app);
