@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react'
 import Cards from './Cards'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import { BACKEND_URL } from '../../utils/utils.js';
 
 function Course() {
     const [book, setBook] = useState([])
-    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
+    // const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
+    const baseURL = BACKEND_URL || 'http://localhost:4001';
 
     useEffect(() => {
         const getBook = async () => {

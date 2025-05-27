@@ -5,12 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { BACKEND_URL } from '../../utils/utils.js';
 
 
 function Login() {
     const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
+    const baseURL = BACKEND_URL || 'http://localhost:4001';
 
     const onSubmit = async (data) => {
         const userInfo = {

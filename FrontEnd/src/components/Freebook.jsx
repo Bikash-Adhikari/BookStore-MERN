@@ -5,10 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from './Cards';
 import axios from 'axios';
+import { BACKEND_URL } from '../../utils/utils.js';
 
 function Freebook() {
     const [freebook, setFreebook] = useState([])
-    const baseURL = import.meta.env.VITE_REACT_APP_FRONTEND_BASE_URL || 'http://localhost:4001';
+    const baseURL = BACKEND_URL || 'http://localhost:4001';
 
     useEffect(() => {
         const getFreebook = async () => {
