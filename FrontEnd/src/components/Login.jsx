@@ -17,7 +17,9 @@ function Login() {
             email: data.email,
             password: data.password
         }
-        await axios.post(`${baseURL}/user/login`, userInfo)
+        await axios.post(`${baseURL}/user/login`, userInfo, {
+            withCredentials: true
+        })
             .then((res) => {
                 // console.log(res.data)
                 if (res.data) {

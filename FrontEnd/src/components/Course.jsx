@@ -11,7 +11,9 @@ function Course() {
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get(`${baseURL}/book`) //getting data fron Backend & Database
+                const res = await axios.get(`${baseURL}/book`, {
+                    withCredentials: true
+                }) //getting data fron Backend & Database
                 // console.log(res.data)
                 setBook(res.data)
 

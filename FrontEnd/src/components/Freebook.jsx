@@ -13,7 +13,9 @@ function Freebook() {
     useEffect(() => {
         const getFreebook = async () => {
             try {
-                const res = await axios.get(`${baseURL}/book`)
+                const res = await axios.get(`${baseURL}/book`, {
+                    withCredentials: true
+                })
                 const freeRes = res.data.filter((data) => data.category === "Free")
                 setFreebook(freeRes)
                 // console.log(freeRes)
