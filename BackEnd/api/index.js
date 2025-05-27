@@ -56,6 +56,5 @@ app.get('/', (req, res) => {
 });
 
 
-module.exports = app
-module.exports.handler = ServerlessHttp(app)
+export const handler = ServerlessHttp(app);
 
