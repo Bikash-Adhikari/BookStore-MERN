@@ -30,7 +30,7 @@ function Login() {
                     // window.location.reload()
                     // navigate('/courses');
                     setTimeout(() => {
-                        window.location.href = '/courses';
+                        window.location.href = '/';
                     }, 1000);
                 }
 
